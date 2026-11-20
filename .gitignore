@@ -3,4 +3,4 @@ dist
 data/*.db
 data/*.db-journal
 .env
-Open **http://localhost:5173** in your browser.
+
