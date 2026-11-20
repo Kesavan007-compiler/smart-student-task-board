@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: smart-student-task-manager
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.5.0
+      - key: JWT_SECRET
+        generateValue: true
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
